@@ -1,0 +1,2 @@
+-r requirements_desktop.txt
+pyinstaller>=6.0

@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0a0b12">
+<meta name="description" content="CodeBox Nexus Studio is a broad-language developer workspace with GitHub, AI, learning, local projects and terminal tools.">
+<title>CodeBox Nexus Studio</title>
+<style>
+:root{--bg:#090a12;--panel:#111321;--panel2:#171a2c;--line:#292d46;--text:#f2f3ff;--muted:#a1a6c3;--purple:#9b72ff;--cyan:#22d3ee;--gold:#f6c866;--green:#76e3b0;--red:#ff7c91;--radius:22px;--shadow:0 28px 90px #0008}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(900px 500px at 12% -10%,#38226055,transparent 65%),radial-gradient(700px 400px at 100% 15%,#0e748033,transparent 60%),var(--bg);color:var(--text);font:15px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}button,input{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}.hidden{display:none!important}.wrap{width:min(1160px,calc(100% - 36px));margin:auto}.nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px;border-bottom:1px solid #ffffff0d}.brand{display:flex;gap:12px;align-items:center;font-weight:900;letter-spacing:.08em}.logo{height:44px;width:44px;border-radius:14px;background:linear-gradient(135deg,var(--purple),var(--cyan));display:grid;place-items:center;box-shadow:0 8px 30px #8b5cf655}.logo svg{width:29px;height:29px}.brand small{display:block;color:var(--muted);font-size:9px;letter-spacing:.2em;font-weight:700}.nav-links{display:flex;align-items:center;gap:22px;color:var(--muted);font-size:13px}.nav-links a:hover{color:white}.button{border:1px solid var(--line);padding:11px 17px;border-radius:12px;color:var(--text);background:#ffffff07;font-weight:750;transition:.18s}.button:hover{transform:translateY(-1px);border-color:#8b5cf6;background:#8b5cf61a}.button.primary{background:linear-gradient(120deg,#8156ef,#4a65ee);border-color:transparent;box-shadow:0 10px 28px #6745dd35}.button.cyan{background:linear-gradient(120deg,#0ea5ba,#1675b9);border-color:transparent}.button:disabled{opacity:.35;cursor:not-allowed;transform:none}.hero{padding:78px 0 58px;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:9px;color:#d1c2ff;background:#9b72ff14;border:1px solid #9b72ff3a;border-radius:999px;padding:7px 12px;font-size:11px;font-weight:800;letter-spacing:.13em;text-transform:uppercase}.dot{height:7px;width:7px;border-radius:50%;background:var(--green);box-shadow:0 0 15px var(--green)}h1{font-size:clamp(42px,6vw,70px);line-height:1.02;letter-spacing:-.055em;margin:24px 0 21px}h1 span{background:linear-gradient(100deg,#b99aff 10%,#5ce4ed 85%);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{max-width:600px;color:var(--muted);font-size:17px;line-height:1.8}.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0}.micro{font-size:12px;color:var(--muted)}.editor-card{border:1px solid #30334f;background:linear-gradient(145deg,#15172aee,#0c0e18ee);border-radius:20px;box-shadow:var(--shadow);overflow:hidden;transform:perspective(1200px) rotateY(-4deg) rotateX(2deg)}.editor-head{height:48px;border-bottom:1px solid var(--line);display:flex;align-items:center;padding:0 15px;gap:7px}.traffic{display:flex;gap:5px}.traffic i{width:8px;height:8px;border-radius:50%;background:#ff6f88}.traffic i:nth-child(2){background:#f7c768}.traffic i:nth-child(3){background:#62deb0}.filetitle{margin-left:14px;font-size:11px;color:#bfc4dd}.head-badge{margin-left:auto;color:#a9e9ff;background:#22d3ee13;border:1px solid #22d3ee33;border-radius:7px;padding:4px 7px;font-size:9px}.code{padding:22px 16px 20px;font:12px/1.9 ui-monospace,SFMono-Regular,Consolas,monospace;overflow:hidden;color:#d4d9f5}.line{white-space:nowrap}.ln{display:inline-block;color:#555b79;width:26px;user-select:none}.kw{color:#c4a7ff}.fn{color:#64dff0}.str{color:#f6a6bf}.cm{color:#7d86a9}.num{color:#f6c866}.cls{color:#80e6ad}.float-chip{display:inline-flex;gap:9px;align-items:center;border:1px solid var(--line);background:#101320;border-radius:11px;padding:10px 13px;font-size:11px;color:#cfd4ec;margin:0 8px 0 0}.float-chip b{color:var(--green)}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;padding:12px 0 70px}.stat{border:1px solid var(--line);background:#ffffff04;border-radius:14px;padding:18px}.stat strong{display:block;font-size:23px;letter-spacing:-.04em}.stat span{font-size:11px;color:var(--muted)}section{padding:44px 0 70px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:25px}.section-head h2{font-size:clamp(28px,4vw,42px);letter-spacing:-.045em;line-height:1.1;margin:0 0 10px}.section-head p{color:var(--muted);max-width:520px;margin:0}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.feature{background:linear-gradient(145deg,#15172a99,#0d0f1a99);border:1px solid var(--line);border-radius:18px;padding:22px;min-height:188px}.feature-icon{width:42px;height:42px;display:grid;place-items:center;background:#9b72ff18;border:1px solid #9b72ff2b;color:#c4adff;border-radius:13px;font-size:19px}.feature h3{margin:17px 0 6px;font-size:17px}.feature p{margin:0;color:var(--muted);font-size:13px}.language-cloud{display:flex;gap:8px;flex-wrap:wrap}.language-cloud span{padding:8px 11px;border-radius:9px;background:#15172a;border:1px solid #2c304a;color:#d1d5ef;font:12px ui-monospace,monospace}.plans{display:grid;grid-template-columns:1fr 1fr;gap:17px}.plan{background:linear-gradient(145deg,#15172a,#0e101b);border:1px solid var(--line);border-radius:22px;padding:28px;position:relative;overflow:hidden}.plan.plus{border-color:#7d5bdb;box-shadow:0 0 0 1px #7d5bdb33 inset}.plan h3{margin:0 0 8px;font-size:23px}.plan .sub{color:var(--muted);font-size:13px}.price{font-size:35px;letter-spacing:-.05em;font-weight:900;margin:18px 0}.price small{font-size:12px;color:var(--muted);letter-spacing:0;font-weight:500}.plan ul{padding-left:19px;line-height:2.15;color:#d4d7eb;font-size:13px;min-height:160px}.plan li::marker{color:var(--green)}.lock{display:inline-flex;gap:7px;align-items:center;color:#f4d89a;background:#f6c86612;border:1px solid #f6c86645;border-radius:9px;padding:8px 10px;font-size:11px;font-weight:800}.download-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.status{margin-top:14px;min-height:18px;color:var(--muted);font-size:12px}.footer{border-top:1px solid #ffffff10;padding:28px 0;color:var(--muted);font-size:12px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.login-overlay{position:fixed;inset:0;z-index:20;display:grid;place-items:center;padding:20px;background:#05060deF;backdrop-filter:blur(18px);overflow:auto}.login-card{width:min(470px,100%);background:linear-gradient(145deg,#1b1d32,#0c0e18);border:1px solid #373b5a;border-radius:24px;padding:27px;box-shadow:0 30px 100px #000b;margin:auto}.login-logo{display:flex;align-items:center;justify-content:center;margin-bottom:13px}.login-card h2{text-align:center;font-size:26px;letter-spacing:-.04em;margin:12px 0 5px}.login-card>p{text-align:center;color:var(--muted);font-size:13px;margin:0 0 22px}.tabs{display:grid;grid-template-columns:1fr 1fr;background:#090b14;border-radius:11px;padding:4px;margin-bottom:18px}.tab{border:0;color:var(--muted);background:transparent;padding:10px;border-radius:8px;font-weight:800;font-size:12px}.tab.active{background:#27213f;color:#e9ddff}.field{margin:12px 0}.field label{display:block;color:#bac0db;font-size:11px;font-weight:800;margin-bottom:6px}.field input{width:100%;border:1px solid #353953;background:#0c0f1b;color:white;border-radius:10px;padding:12px 13px;outline:none}.field input:focus{border-color:#9972ff;box-shadow:0 0 0 3px #9972ff22}.full{width:100%;margin-top:7px}.or{display:flex;align-items:center;gap:12px;color:#707895;font-size:10px;text-transform:uppercase;letter-spacing:.12em;margin:16px 0}.or:before,.or:after{content:"";height:1px;background:#343750;flex:1}.oauth-row{display:grid;grid-template-columns:1fr 1fr;gap:9px}.form-status{color:var(--muted);font-size:12px;min-height:20px;margin-top:12px;white-space:pre-wrap}.fineprint{font-size:10px!important;color:#777e9a!important;line-height:1.6!important;margin:18px 0 0!important}.mobile-menu{display:none}
+@media(max-width:850px){.hero{grid-template-columns:1fr;padding:54px 0 35px;gap:34px}.editor-card{transform:none}.stats{grid-template-columns:repeat(2,1fr);padding-bottom:35px}.grid{grid-template-columns:repeat(2,1fr)}.nav-links{gap:13px}.hero h1{max-width:740px}}
+@media(max-width:580px){.wrap{width:min(100% - 24px,1160px)}.nav{height:66px}.nav-links a:not(.button){display:none}.brand{font-size:13px}.brand small{font-size:8px}.hero{padding-top:42px}.hero p{font-size:15px}.hero-actions .button{flex:1}.stats{gap:8px}.stat{padding:13px}.stat strong{font-size:20px}.grid,.plans{grid-template-columns:1fr}.feature{min-height:0}.section-head{display:block}.section-head .button{margin-top:18px}.plan ul{min-height:0}.code{font-size:10px}.head-badge{display:none}.login-card{padding:21px}.footer{display:block}.footer span{display:block;margin:5px 0}}
+</style>
+</head>
+<body>
+<div id="loginGate" class="login-overlay">
+  <div class="login-card">
+    <div class="login-logo"><div class="logo"><svg viewBox="0 0 40 40" fill="none"><path d="M15 9 6 20l9 11M25 9l9 11-9 11M23 6l-6 28" stroke="white" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+    <h2>Welcome to CodeBox</h2><p>Your coding studio. One account for web and desktop.</p>
+    <div class="tabs"><button class="tab active" id="signinTab" type="button">Sign in</button><button class="tab" id="registerTab" type="button">Create account</button></div>
+    <form id="accountForm">
+      <div class="field"><label for="email">EMAIL ADDRESS</label><input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com"></div>
+      <div class="field" id="passwordWrap"><label for="password">PASSWORD</label><input id="password" name="password" type="password" autocomplete="current-password" minlength="10" required placeholder="At least 10 characters"></div>
+      <button class="button primary full" id="submitAccount" type="submit">Sign in securely</button>
+    </form>
+    <div class="or">or use a provider</div>
+    <div class="oauth-row"><button class="button" id="githubOAuth" type="button">⌘ GitHub</button><button class="button" id="googleOAuth" type="button">G Google</button></div>
+    <div class="or">email code</div>
+    <div class="field"><label for="otp">6-DIGIT EMAIL CODE</label><input id="otp" inputmode="numeric" maxlength="6" autocomplete="one-time-code" placeholder="Enter code from your email"></div>
+    <div class="oauth-row"><button class="button" id="sendCode" type="button">Send code</button><button class="button" id="verifyCode" type="button">Verify & sign in</button></div>
+    <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
+    <p class="fineprint">Email-code sign-in requires the site owner to configure SMTP. Google and GitHub sign-in need OAuth app credentials. Passwords are stored as server-side hashes, not in this HTML file.</p>
+  </div>
+</div>
+
+<div id="siteView" class="hidden">
+  <div class="wrap">
+    <header class="nav">
+      <a class="brand" href="#top" aria-label="CodeBox home"><div class="logo"><svg viewBox="0 0 40 40" fill="none"><path d="M15 9 6 20l9 11M25 9l9 11-9 11M23 6l-6 28" stroke="white" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div>CODEBOX<small>NEXUS STUDIO</small></div></a>
+      <nav class="nav-links"><a href="#features">Features</a><a href="#languages">Languages</a><a href="#plans">Plans</a><button class="button" id="accountButton">Account</button><button class="button" id="logoutButton">Sign out</button></nav>
+    </header>
+    <main id="top">
+      <div class="hero">
+        <div><div class="eyebrow"><span class="dot"></span> Developer workspace · Free + Plus</div><h1>Build without<br><span>switching worlds.</span></h1><p>A powerful desktop coding workspace with broad language highlighting, local projects, a terminal, GitHub tools, AI integrations and gamified learning. One account unlocks the web downloads and desktop sign-in.</p><div class="hero-actions"><a class="button primary" href="#plans">Explore downloads ↗</a><a class="button" href="#features">Explore the studio</a></div><div><span class="float-chip"><b>●</b> Local-first files</span><span class="float-chip">⌘ GitHub workflow</span><span class="float-chip">✦ AI-ready</span></div></div>
+        <div class="editor-card"><div class="editor-head"><div class="traffic"><i></i><i></i><i></i></div><div class="filetitle">app.ts · CodeBox Editor</div><span class="head-badge">STUDIO PREVIEW</span></div><div class="code"><div class="line"><span class="ln">01</span><span class="kw">import</span> { <span class="fn">createApp</span> } <span class="kw">from</span> <span class="str">'codebox'</span>;</div><div class="line"><span class="ln">02</span></div><div class="line"><span class="ln">03</span><span class="kw">type</span> <span class="cls">Workspace</span> = {</div><div class="line"><span class="ln">04</span>  language: <span class="str">'many'</span> | <span class="str">'more'</span>;</div><div class="line"><span class="ln">05</span>  shipIt: <span class="kw">boolean</span>;</div><div class="line"><span class="ln">06</span>};</div><div class="line"><span class="ln">07</span></div><div class="line"><span class="ln">08</span><span class="kw">const</span> workspace: <span class="cls">Workspace</span> = {</div><div class="line"><span class="ln">09</span>  language: <span class="str">'many'</span>,</div><div class="line"><span class="ln">10</span>  shipIt: <span class="kw">true</span></div><div class="line"><span class="ln">11</span>};</div><div class="line"><span class="ln">12</span></div><div class="line"><span class="ln">13</span><span class="cm">// Create. Test. Commit. Repeat.</span></div><div class="line"><span class="ln">14</span><span class="fn">createApp</span>(workspace); <span class="num">// ✓</span></div></div></div>
+      </div>
+      <div class="stats"><div class="stat"><strong>Hundreds</strong><span>Language lexer options</span></div><div class="stat"><strong>2</strong><span>Release editions</span></div><div class="stat"><strong>Local</strong><span>Your files stay on device by default</span></div><div class="stat"><strong>API-ready</strong><span>GitHub + AI providers</span></div></div>
+    </main>
+    <section id="features"><div class="section-head"><div><div class="eyebrow">Everything in one cockpit</div><h2>Less context switching.<br>More building.</h2></div><p>CodeBox combines useful everyday tools instead of pretending every runtime ships inside one app. Install the toolchains you need; the editor can open almost any text-based project file.</p></div><div class="grid">
+      <article class="feature"><div class="feature-icon">⌨</div><h3>Multi-language editor</h3><p>Tabbed editing, file explorer, syntax highlighting through Pygments, search/replace and reusable project files.</p></article>
+      <article class="feature"><div class="feature-icon">▶</div><h3>Terminal & runners</h3><p>Run common languages through installed runtimes and compilers. Compiler output and app logs appear in the terminal panel.</p></article>
+      <article class="feature"><div class="feature-icon">⌘</div><h3>GitHub workspace</h3><p>Connect with a token or OAuth, browse repositories, create repos, upload files and maintain local project snapshots.</p></article>
+      <article class="feature"><div class="feature-icon">✦</div><h3>AI Lab</h3><p>Use your own Gemini or Groq API key. Credentials are entered at runtime, not hardcoded in the source.</p></article>
+      <article class="feature"><div class="feature-icon">⌂</div><h3>Local vault</h3><p>Organize projects, save snapshots and keep your workspace files on your computer unless you explicitly upload them.</p></article>
+      <article class="feature"><div class="feature-icon">⬆</div><h3>Learn & level up</h3><p>Lessons, XP, achievements and progress tracking to make consistent practice feel less like homework.</p></article>
+    </div></section>
+    <section id="languages"><div class="section-head"><div><div class="eyebrow">Language playground</div><h2>Bring your stack.</h2></div><p>Syntax highlighting covers a broad range of programming, markup, config and data formats. Execution depends on which runtime, SDK or compiler is installed on your operating system.</p></div><div class="language-cloud"><span>Python</span><span>JavaScript</span><span>TypeScript</span><span>JSX / TSX</span><span>HTML</span><span>CSS / SCSS</span><span>Java</span><span>C / C++</span><span>C#</span><span>Go</span><span>Rust</span><span>PHP</span><span>Ruby</span><span>Perl</span><span>Lua</span><span>Swift</span><span>Kotlin</span><span>Dart</span><span>R</span><span>Julia</span><span>SQL</span><span>PowerShell</span><span>Bash</span><span>YAML</span><span>JSON</span><span>XML</span><span>Markdown</span><span>GraphQL</span><span>Solidity</span><span>Haskell</span><span>Elixir</span><span>Erlang</span><span>Fortran</span><span>Pascal</span><span>Terraform</span><span>Dockerfile</span><span>Diff / Patch</span><span>and many more…</span></div></section>
+    <section id="plans"><div class="section-head"><div><div class="eyebrow">Choose your build</div><h2>Free to start.<br>Plus when you need more.</h2></div><p>Downloads only appear after sign-in. The Plus release stays locked until the server confirms a Plus entitlement.</p></div><div class="plans">
+      <article class="plan"><div class="eyebrow">Start building</div><h3>CodeBox Free</h3><div class="sub">The core coding workspace</div><div class="price">Free <small>· no charge</small></div><ul><li>Editor, file explorer and common runners</li><li>Local projects and GitHub tools</li><li>Learning lessons, XP and achievements</li><li>AI Lab with your own provider key</li></ul><div class="download-row"><button class="button primary" id="freeDownload">Download Free</button><span class="micro">Sign-in required</span></div><div class="status" id="freeStatus"></div></article>
+      <article class="plan plus"><div class="eyebrow" style="color:var(--gold);border-color:#f6c86644;background:#f6c86610">Power user edition</div><h3>CodeBox Plus</h3><div class="sub">For active Plus subscribers</div><div class="price">Plus <small>· entitlement required</small></div><ul><li>Everything in Free</li><li>Plus-only bulk project actions and advanced vault tools</li><li>Expanded AI request limits configured by the service</li><li>Plus release download verified by the server</li></ul><div class="download-row"><button class="button cyan" id="plusDownload">Unlock Plus Download</button><span id="plusBadge" class="lock">🔒 Locked</span></div><div class="status" id="plusStatus"></div></article>
+    </div></section>
+    <footer class="footer"><span>© 2026 CodeBox Nexus Studio · Build with curiosity.</span><span id="footerAccount">Signed out</span><span>Never publish API keys, OAuth secrets, or GitHub tokens.</span></footer>
+  </div>
+</div>
+<script>
+const $ = id => document.getElementById(id);
+let mode = 'login';
+let currentUser = null;
+const gate = $('loginGate'), view = $('siteView'), formStatus = $('formStatus');
+function say(message, good=false){ formStatus.textContent=message; formStatus.style.color=good?'#76e3b0':'#a1a6c3'; }
+function setMode(next){ mode=next; $('signinTab').classList.toggle('active',mode==='login'); $('registerTab').classList.toggle('active',mode==='register'); $('submitAccount').textContent=mode==='login'?'Sign in securely':'Create account'; $('password').autocomplete=mode==='login'?'current-password':'new-password'; $('password').required=true; }
+$('signinTab').addEventListener('click',()=>setMode('login'));
+$('registerTab').addEventListener('click',()=>setMode('register'));
+async function api(path, options={}){
+  const response = await fetch(path,{credentials:'include',headers:{'Content-Type':'application/json',...(options.headers||{})},...options});
+  let data={}; try{data=await response.json()}catch{}
+  if(!response.ok) throw new Error(data.error || `Request failed (${response.status})`);
+  return data;
+}
+function enterSite(user){
+  currentUser=user; gate.classList.add('hidden'); view.classList.remove('hidden');
+  $('footerAccount').textContent=`Signed in as ${user.email} · ${user.plan.toUpperCase()}`;
+  $('plusBadge').textContent=user.plan==='plus'?'✓ Plus active':'🔒 Locked';
+  $('plusBadge').style.color=user.plan==='plus'?'#76e3b0':'';
+  $('plusDownload').textContent=user.plan==='plus'?'Download Plus':'Unlock Plus Download';
+  $('plusDownload').disabled=false;
+}
+function showGate(){view.classList.add('hidden');gate.classList.remove('hidden');currentUser=null;}
+$('accountForm').addEventListener('submit', async (event)=>{
+  event.preventDefault(); const email=$('email').value.trim(); const password=$('password').value;
+  try{
+    $('submitAccount').disabled=true; say(mode==='login'?'Signing in…':'Creating account…');
+    const data=await api(mode==='login'?'/api/login':'/api/register',{method:'POST',body:JSON.stringify({email,password})});
+    enterSite(data.user); say('Signed in successfully.',true);
+  }catch(error){say(error.message)}finally{$('submitAccount').disabled=false;}
+});
+$('sendCode').addEventListener('click',async()=>{
+  try{const data=await api('/api/auth/send-code',{method:'POST',body:JSON.stringify({email:$('email').value.trim()})});say(data.message||'Code sent.',true)}catch(error){say(error.message)}
+});
+$('verifyCode').addEventListener('click',async()=>{
+  try{const data=await api('/api/auth/verify-code',{method:'POST',body:JSON.stringify({email:$('email').value.trim(),code:$('otp').value.trim()})});enterSite(data.user);say('Email verified. Welcome to CodeBox.',true)}catch(error){say(error.message)}
+});
+$('githubOAuth').addEventListener('click',()=>{window.location.href='/auth/github/start?client=web'});
+$('googleOAuth').addEventListener('click',()=>{window.location.href='/auth/google/start?client=web'});
+$('logoutButton').addEventListener('click',async()=>{try{await api('/api/logout',{method:'POST',body:'{}'})}catch{}showGate();say('You have signed out.');});
+$('accountButton').addEventListener('click',()=>{if(currentUser)alert(`Account: ${currentUser.email}\nPlan: ${currentUser.plan}\nDownloads and paid access are verified by the CodeBox server.`)});
+async function download(path,statusId,filename){
+  const output=$(statusId); output.textContent='Checking your account…';
+  try{
+    const response=await fetch(path,{credentials:'include'});
+    const contentType=response.headers.get('content-type')||'';
+    if(!response.ok){let data={};try{data=await response.json()}catch{}throw new Error(data.error||'Download failed')}
+    const blob=await response.blob(); const url=URL.createObjectURL(blob); const link=document.createElement('a');link.href=url;const disposition=response.headers.get('Content-Disposition')||'';const match=disposition.match(/filename="?([^";]+)"?/i);link.download=match?match[1]:filename;document.body.appendChild(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),30000);output.textContent='Download started.';output.style.color='#76e3b0';
+  }catch(error){output.textContent=error.message;output.style.color='#ff9aab';if(error.message.toLowerCase().includes('sign in'))showGate();}
+}
+$('freeDownload').addEventListener('click',()=>download('/api/download/free','freeStatus','CodeBox_Free.py'));
+$('plusDownload').addEventListener('click',()=>download('/api/download/plus','plusStatus','CodeBox_Plus.py'));
+async function boot(){
+  try{const data=await api('/api/me',{method:'GET',headers:{}});enterSite(data.user)}catch{showGate()}
+  try{const cfg=await api('/api/public-config',{method:'GET',headers:{}});$('githubOAuth').classList.toggle('hidden',!cfg.github_enabled);$('googleOAuth').classList.toggle('hidden',!cfg.google_enabled);$('sendCode').disabled=!cfg.email_code_enabled;if(!cfg.email_code_enabled)$('sendCode').title='Email code sign-in needs SMTP configuration on the server.';}catch{}
+}
+boot();
+</script>
+</body>
+</html>
